@@ -27,94 +27,29 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## SaaS/Hosted Platforms
 
-* **LaunchDarkly**
-  Feature-management and progressive-release platform providing feature flags, guarded rollouts, approvals, release workflows, experimentation, and release pipelines. Its release-pipeline functionality can move flags through multiple environments and audiences using automated phases.
+| Platform / Service | Capabilities & Focus | Starting Pricing | Free Tier & Trial Limits |
+| ------------------ | -------------------- | ---------------- | ------------------------ |
+| **LaunchDarkly** | Feature management, guarded rollouts, release pipelines, approval workflows, audience targeting, and progressive delivery. | **$12.00 / service connection / mo** (Foundation plan) | **Developer Plan (Free forever):** Unlimited flags & seats, up to 5 service connections, 1,000 client-side MAUs. Includes a **14-day free trial** of Enterprise features with no credit card required. |
+| **Harness CD & GitOps** | Multi-service release orchestration, canary/blue-green deployments, automated AI verification, rollback, and deployment governance. | **$100.00 / service / mo** (or **$50.00 / dev / mo** on Essentials plan) | **Free Plan (Free forever):** Up to 5 services, 1 concurrent pipeline execution, 10 GB code storage, and 1 GB data transfer/mo. |
+| **Octopus Deploy** | Release management, deployment orchestration across multi-tier environments, runbooks, approvals, and multi-tenant delivery. | **$347.50 / mo** ($4,170/yr billed annually for Professional plan) | **Community Tier (Free forever):** Up to 10 deployment targets (machines), 10 projects, 10 tenants, 10 users, and 5 concurrent tasks. Includes a **30-day free trial** of Enterprise features. |
+| **CloudBees CD/RO** | Enterprise release orchestration, multi-pipeline dependencies, release calendars, approval gates, audit compliance, and hybrid/mainframe deployment. | **$100.00 / mo** (CloudBees Platform Starter/Team tier) | **Free Edition (Free forever):** Up to 5 users and 2,000 pipeline execution minutes/mo. Includes a **14-day free trial** of Enterprise features. |
+| **Digital.ai Release** *(formerly XL Release)* | Model-driven enterprise release orchestration, cross-tool pipeline governance, automated risk assessment, dependency mapping, and compliance tracking. | **$1,500.00 / application / yr** (Essentials base tier) | **30-Day Free Trial:** Full access to enterprise release orchestration, release templates, automated deployment workflows, and evaluation license key. |
+| **Plutora Release** *(Planview)* | Enterprise value stream management, release planning, deployment schedules, cross-team release governance, and test environment coordination. | **$2,500.00 / user / yr** (Enterprise Release Management starting license) | **30-Day Proof-of-Concept (POC) Trial:** Guided enterprise evaluation trial with access to release calendars, environment orchestration, and governance dashboards upon request. |
+| **DeployHub** *(Ortelius OS)* | Microservice component-level release orchestration, SBOM continuous generation, configuration drift detection, and application blast-radius tracking. | **$40.00 / component / mo** (DeployHub Pro tier) | **Ortelius OS (Free forever):** Free open-source SaaS tier supporting vulnerability detection & SBOM tracking for up to 5 microservice components with unlimited users. |
+| **GitLab CI/CD & Release** | Single DevOps platform with end-to-end continuous delivery, environments, manual approval gates, release milestones, and progressive delivery. | **$29.00 / user / mo** (GitLab Premium, billed annually) | **GitLab Free (Free forever):** Up to 5 users per namespace, 400 CI/CD compute minutes/mo, 5 GB storage, and 10 GB monthly data transfer. |
+| **Codefresh** *(Octopus Deploy)* | Cloud-native CI/CD and GitOps platform natively integrated with Argo CD & Argo Workflows for Kubernetes release management. | **$99.00 / mo** (CI/CD Starter tier) | **14-Day Free Trial:** Full access to cloud-hosted Argo CD GitOps workflows, automated builds, deployment dashboards, and container registry integrations. |
+| **DeployHQ** | Continuous deployment automation platform supporting scheduled releases, multiple server targets, rollbacks, and environment pipelines. | **$4.50 / mo** (Solo plan with 10 projects) | **Free Tier (Free forever):** 1 project, 5 deployment server targets, 30 build minutes/mo, and 30 days of deployment history. Includes a **10-day free trial** on paid plans. |
+| **Semaphore** | High-performance hosted CI/CD and release automation engine with visual environment promotion pipelines and secret management. | **$15.00 / mo** (Pay-as-you-go base tier) | **Free Tier (Free forever):** **$15.00 free credit every month** (equivalent to ~2,000 build minutes on 2-vCPU Ubuntu execution environments). |
+| **Akuity Platform** | Enterprise managed Argo CD, Kargo, and Argo Workflows platform for scalable Kubernetes continuous delivery and multi-cluster GitOps. | **$495.00 / mo** (Pro plan for 1 Argo CD & 1 Kargo control plane) | **14-Day Free Trial:** Fully functional managed Argo CD & Kargo control plane with up to 50 applications, 50 delivery stages, and 25M AI tokens. *(Up to 6 months free for eligible early-stage startups).* |
+| **OpsMx** | Intelligent release orchestration & progressive delivery platform built on Spinnaker and Argo with automated AI-driven release verification. | **$625.00 / mo** ($7,500/yr for 10 users on Cloud Marketplaces) | **Community Tier (Free forever):** 1 application pipeline with basic AI verification and security scanning. Includes a **14-day free trial** for Enterprise features. |
+| **Azure DevOps** *(Pipelines & Releases)* | Microsoft multi-stage deployment release pipelines, approvals, gated deployments, artifact management, and Azure/multi-cloud target orchestration. | **$6.00 / user / mo** (Basic plan for user 6+) | **Free Tier (Free forever):** First 5 users free, 1,800 free CI/CD minutes/mo on 1 Microsoft-hosted job, 1 self-hosted parallel job with unlimited minutes, and 2 GB artifact storage. |
+| **AWS CodePipeline & CodeDeploy** | AWS-native release pipeline and deployment orchestration service for EC2, ECS, Lambda, and on-premises server fleets. | **$1.00 / active pipeline / mo** (V1) / **$0.002 / action min** (V2); CodeDeploy is **$0.02 / on-premise instance update** (Free for AWS targets) | **AWS Free Tier (Free forever):** 1 active CodePipeline per month at no charge, 100 free action execution minutes/mo for V2 pipelines, and all new pipelines free for their first 30 days. |
+| **Google Cloud Deploy** | Managed continuous delivery and progressive rollout service for GKE, Cloud Run, and Anthos with automated delivery pipelines and approvals. | **$5.00 / active multi-target pipeline / mo** (single-target pipelines are $0) | **Google Cloud Free Tier:** 1st active multi-target delivery pipeline each month is **$0.00**; includes 120 free Cloud Build min/day and GCP's **90-day $300 free trial credit**. |
+| **Red Hat OpenShift Dedicated** *(GitOps & Pipelines)* | Managed enterprise Kubernetes delivery platform bundling Tekton-based OpenShift Pipelines and Argo CD-based OpenShift GitOps. | **$0.076 / 4 vCPU / hr** (~$55.00/mo base compute unit) | **60-Day Free Trial:** Single self-managed/dedicated evaluation cluster with up to 40 vCPUs of worker capacity with OpenShift Pipelines and GitOps operators included. |
+| **CircleCI** | Cloud CI/CD and release automation platform supporting parallel workflows, Docker layer caching, environment approvals, and release triggers. | **$15.00 / mo** (Performance plan base) | **Free Tier (Free forever):** 30,000 credits/mo (supports up to 5 active users, translating to ~3,000–6,000 build minutes/mo on Linux Small/Medium runners). |
+| **Bitbucket Pipelines** | Atlassian integrated Git repository and CI/CD deployment service with deployment environments, step approvals, and Jira release tracking. | **$3.00 / user / mo** (Standard plan, billed annually) | **Free Tier (Free forever):** Up to 5 users, 50 build minutes/mo, 1 GB repository storage, and basic environment tracking. |
 
-* **Harness**
-  Software delivery platform providing continuous delivery, deployment automation, release orchestration, verification, rollback, feature flags, and deployment governance.
-
-* **Octopus Deploy**
-  Deployment automation and release-management platform supporting deployment pipelines, environments, approvals, runbooks, infrastructure automation, and multi-stage releases.
-
-* **CloudBees CD/RO**
-  Enterprise release-orchestration platform for coordinating releases across applications, microservices, teams, pipelines, and heterogeneous environments. It provides release pipelines, dependencies, approval gates, release calendars, auditability, and deployment automation.
-
-* **Digital.ai Release**
-  Enterprise release-orchestration platform for coordinating complex application releases, deployment processes, dependencies, approvals, environments, and enterprise delivery workflows.
-
-* **Plutora**
-  Enterprise value-stream and release-management platform focused on release planning, governance, deployment coordination, environments, test management, and release visibility.
-
-* **XL Release**
-  Enterprise release-orchestration product historically associated with Xebia/Digital.ai, providing model-driven release pipelines, approvals, dependencies, deployment automation, and release governance.
-
-* **DeployHub**
-  Deployment and release orchestration platform focused on application components, deployment automation, environment management, release processes, and DevOps governance.
-
-* **ElectricFlow / CloudBees CD**
-  ElectricFlow was the earlier name of the product now known as CloudBees CD/RO. CloudBees states that CloudBees Flow and ElectricFlow became CloudBees CD as the product evolved into its software-delivery automation platform.
-
-* **GitLab Release / GitLab CI/CD**
-  Integrated DevOps platform providing pipelines, environments, deployments, release management, deployment approvals, environments, package management, and progressive-delivery capabilities.
-
-* **Codefresh**
-  Cloud-native CI/CD and GitOps platform focused on Kubernetes application delivery, Argo-based workflows, deployment pipelines, release management, and continuous delivery.
-
-* **DeployHQ**
-  Hosted deployment automation service supporting deployment pipelines, environments, server targets, automated deployments, and release workflows.
-
-* **Semaphore Deploy**
-  Hosted CI/CD and deployment platform providing pipeline automation, deployment workflows, promotion between environments, and release automation.
-
-* **Argo CD Managed**
-  Hosted/managed offerings built around Argo CD and GitOps, providing continuous delivery to Kubernetes through declarative application definitions and Git-based desired state.
-
-* **OpsMx**
-  Enterprise continuous-delivery and progressive-delivery platform built around Spinnaker, providing release orchestration, deployment strategies, policy controls, verification, governance, and enterprise-scale delivery.
-
-* **Jenkins X**
-  Kubernetes-native CI/CD ecosystem built around GitOps and automated promotion. The project is open-source, but hosted/commercial offerings and managed services can also form part of a release-orchestration stack.
-
-* **Semaphore**
-  Cloud CI/CD platform supporting pipeline automation, deployment workflows, promotions, approvals, and release automation.
-
-* **Spinnaker Enterprise / Managed Spinnaker**
-  Commercial and managed offerings around the Spinnaker ecosystem, providing multi-cloud deployment, progressive delivery, release pipelines, approvals, deployment strategies, and enterprise governance.
-
-* **Azure DevOps Releases / Pipelines**
-  Microsoft's DevOps platform providing CI/CD pipelines, multi-stage deployments, environments, approvals, deployment gates, release controls, and integration with Azure and third-party infrastructure.
-
-* **AWS CodePipeline / CodeDeploy**
-  AWS-native continuous-delivery ecosystem providing release pipelines, deployment automation, approvals, environments, deployment strategies, and integrations with AWS infrastructure.
-
-* **Google Cloud Deploy**
-  Managed continuous-delivery service supporting promotion through environments, deployment pipelines, approvals, release management, and Kubernetes/GKE-oriented delivery.
-
-* **Red Hat OpenShift Pipelines / OpenShift GitOps**
-  Enterprise Kubernetes delivery ecosystem combining Tekton-based pipelines and Argo CD-based GitOps for application delivery and release automation.
-
-* **CircleCI**
-  Cloud CI/CD platform supporting deployment pipelines, workflows, approvals, deployment automation, environments, and release processes.
-
-* **Bitbucket Pipelines**
-  Atlassian's CI/CD service integrated with Bitbucket, supporting automated build, test, deployment, environment promotion, and release workflows.
-
-* **Harness Feature Flags**
-  Feature-management and progressive-delivery capability integrated into the Harness software-delivery ecosystem for controlled feature rollout and release risk reduction.
-
-* **Octopus Deploy Cloud**
-  Hosted version of Octopus Deploy providing centralized release management, deployment automation, environments, approvals, runbooks, and deployment targets.
-
-* **Digital.ai Deploy + Release**
-  Combined application-deployment and release-orchestration ecosystem for enterprise organizations managing complex multi-application delivery processes.
-
-* **Plutora Release**
-  Release-management platform emphasizing enterprise release planning, governance, deployment coordination, release calendars, and cross-team visibility.
-
-* **CloudBees Unify Release Orchestration**
-  CloudBees' newer release-orchestration offering designed to coordinate application releases across tools and workflows while centralizing release visibility, health, governance, and risk.
-
-CloudBees CD/RO is particularly representative of the traditional enterprise release-orchestration category: it coordinates multiple application or microservice pipelines, manages dependencies, supports approval gates and release calendars, and can deploy across cloud, traditional, mainframe, and remote environments.
+> **Enterprise Note:** Traditional enterprise release orchestration suites (such as CloudBees CD/RO, Digital.ai Release, and Plutora) specialize in cross-application dependency mapping, release calendars, and corporate governance across hybrid architectures, whereas cloud providers and GitOps platforms focus on declarative, container-native deployment automation.
 
 ## Open-Source GitHub Projects
 
