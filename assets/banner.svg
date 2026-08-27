@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#0a0e1a" />
+    </linearGradient>
+
+    <linearGradient id="titleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="35%" stop-color="#a78bfa" />
+      <stop offset="70%" stop-color="#f472b6" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <linearGradient id="accentCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+
+    <linearGradient id="accentPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+
+    <linearGradient id="glowLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#f43f5e" stop-opacity="0.1" />
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glowSoft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .pulse-node {
+      animation: pulseGlow 3s ease-in-out infinite alternate;
+    }
+    .orbit-pulse {
+      animation: orbitSpin 12s linear infinite;
+      transform-origin: 970px 180px;
+    }
+    .flow-dash {
+      stroke-dasharray: 8, 8;
+      animation: flowLine 20s linear infinite;
+    }
+    .float-badge {
+      animation: floatBadge 4s ease-in-out infinite alternate;
+    }
+    .float-badge-delay {
+      animation: floatBadge 4s ease-in-out infinite alternate 2s;
+    }
+    @keyframes pulseGlow {
+      0% { r: 6px; opacity: 0.7; }
+      100% { r: 9px; opacity: 1; }
+    }
+    @keyframes orbitSpin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes flowLine {
+      from { stroke-dashoffset: 200; }
+      to { stroke-dashoffset: 0; }
+    }
+    @keyframes floatBadge {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-5px); }
+    }
+  </style>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="360" rx="16" fill="url(#bgGradient)" stroke="#1f2937" stroke-width="2" />
+
+  <!-- Background Grid Pattern -->
+  <g opacity="0.08" stroke="#94a3b8" stroke-width="1">
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="150" y1="0" x2="150" y2="360" />
+    <line x1="300" y1="0" x2="300" y2="360" />
+    <line x1="450" y1="0" x2="450" y2="360" />
+    <line x1="600" y1="0" x2="600" y2="360" />
+    <line x1="750" y1="0" x2="750" y2="360" />
+    <line x1="900" y1="0" x2="900" y2="360" />
+    <line x1="1050" y1="0" x2="1050" y2="360" />
+  </g>
+
+  <!-- Top Accent Glowing Bar -->
+  <rect x="0" y="0" width="1200" height="4" fill="url(#glowLine)" />
+
+  <!-- Animated Pipeline Flow Lines in Background -->
+  <g opacity="0.4" stroke="url(#titleGradient)" stroke-width="2" fill="none">
+    <path class="flow-dash" d="M 60 290 Q 250 290 350 250 T 650 250 T 950 180" />
+    <path class="flow-dash" d="M 100 70 Q 300 70 450 120 T 800 120 T 1000 180" />
+  </g>
+
+  <!-- Left Side: Title & Description -->
+  <g transform="translate(80, 0)">
+    <!-- Tag Badge -->
+    <g class="float-badge" transform="translate(0, 52)">
+      <rect width="210" height="28" rx="14" fill="#1e1b4b" stroke="#6366f1" stroke-width="1.5" />
+      <circle cx="14" cy="14" r="5" fill="#22c55e" />
+      <text x="28" y="19" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#a5b4fc" letter-spacing="0.5">AWESOME ECOSYSTEM</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="125" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="38" font-weight="900" fill="url(#titleGradient)" letter-spacing="-0.5">
+      Release Orchestration
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="165" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#f8fafc" opacity="0.95">
+      Continuous Delivery, GitOps &amp; Progressive Rollouts
+    </text>
+
+    <!-- Feature Pillars List -->
+    <text x="0" y="210" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="500" fill="#94a3b8">
+      🚀 <tspan fill="#e2e8f0" font-weight="600">Enterprise SaaS</tspan> &nbsp;•&nbsp; ⚡ <tspan fill="#e2e8f0" font-weight="600">Open-Source GitOps</tspan> &nbsp;•&nbsp; 🛡️ <tspan fill="#e2e8f0" font-weight="600">Canary &amp; Automated Governance</tspan>
+    </text>
+
+    <!-- Badges Row -->
+    <g transform="translate(0, 245)">
+      <!-- Badge 1: GitOps -->
+      <g class="float-badge">
+        <rect width="110" height="34" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1" />
+        <text x="55" y="22" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#38bdf8">☸ GitOps CD</text>
+      </g>
+      <!-- Badge 2: Multi-Cloud -->
+      <g class="float-badge-delay" transform="translate(122, 0)">
+        <rect width="120" height="34" rx="8" fill="#1e293b" stroke="#a855f7" stroke-width="1" />
+        <text x="60" y="22" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#c084fc">☁ Multi-Cloud</text>
+      </g>
+      <!-- Badge 3: Governance -->
+      <g class="float-badge" transform="translate(254, 0)">
+        <rect width="128" height="34" rx="8" fill="#1e293b" stroke="#ec4899" stroke-width="1" />
+        <text x="64" y="22" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#f472b6">🔒 Governance</text>
+      </g>
+      <!-- Badge 4: Automated Canary -->
+      <g class="float-badge-delay" transform="translate(394, 0)">
+        <rect width="138" height="34" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="1" />
+        <text x="69" y="22" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#34d399">🎯 Canary Rollout</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Right Side: Release Orchestration Visual Diagram -->
+  <g transform="translate(970, 180)">
+    <!-- Outer Orbit Ring -->
+    <circle cx="0" cy="0" r="115" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="4, 4" opacity="0.6" />
+    <circle cx="0" cy="0" r="80" fill="none" stroke="#475569" stroke-width="1.5" opacity="0.5" />
+    <circle cx="0" cy="0" r="45" fill="#1e1b4b" stroke="#6366f1" stroke-width="2" filter="url(#glowSoft)" />
+
+    <!-- Center Icon: Release Core -->
+    <text x="0" y="7" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" fill="#ffffff">🚀</text>
+
+    <!-- Rotating Nodes -->
+    <g class="orbit-pulse">
+      <!-- Node 1: Plan -->
+      <g transform="translate(0, -115)">
+        <circle cx="0" cy="0" r="16" fill="#0f172a" stroke="#38bdf8" stroke-width="2" />
+        <text x="0" y="5" text-anchor="middle" font-size="12">📋</text>
+      </g>
+      <!-- Node 2: Build -->
+      <g transform="translate(115, 0)">
+        <circle cx="0" cy="0" r="16" fill="#0f172a" stroke="#a855f7" stroke-width="2" />
+        <text x="0" y="5" text-anchor="middle" font-size="12">⚙️</text>
+      </g>
+      <!-- Node 3: Gate/Approval -->
+      <g transform="translate(0, 115)">
+        <circle cx="0" cy="0" r="16" fill="#0f172a" stroke="#ec4899" stroke-width="2" />
+        <text x="0" y="5" text-anchor="middle" font-size="12">🛡️</text>
+      </g>
+      <!-- Node 4: Promote -->
+      <g transform="translate(-115, 0)">
+        <circle cx="0" cy="0" r="16" fill="#0f172a" stroke="#10b981" stroke-width="2" />
+        <text x="0" y="5" text-anchor="middle" font-size="12">🌐</text>
+      </g>
+    </g>
+
+    <!-- Pulsing Signal Rings -->
+    <circle class="pulse-node" cx="0" cy="0" r="6" fill="#60a5fa" opacity="0.8" />
+  </g>
+</svg>
